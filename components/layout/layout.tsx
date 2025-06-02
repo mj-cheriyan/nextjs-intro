@@ -1,4 +1,6 @@
 import React from "react";
+import Header from "../header";
+import Footer from "../footer";
 
 interface IProps {
     children: React.ReactNode;
@@ -6,9 +8,10 @@ interface IProps {
 
 export default function Layout({children}: IProps){
     return (
-        <div>
-            <h1>Hello World</h1>
-            {children} 
-        </div>
+         <>
+            <Header />
+            <main className="p-4 bg-base-200">{children}</main>
+            <Footer />
+        </>
     );
 }
